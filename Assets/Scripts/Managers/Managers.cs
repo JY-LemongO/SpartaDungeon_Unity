@@ -9,8 +9,10 @@ public class Managers : MonoBehaviour
 
     #region Content
     PlayerInfo _player = new PlayerInfo();
+    Inventory _inven = new Inventory();
 
-    public PlayerInfo Player => Instance?._player;
+    public static PlayerInfo Player => Instance?._player;
+    public static Inventory Inven => Instance?._inven;
     #endregion
 
 
@@ -18,8 +20,8 @@ public class Managers : MonoBehaviour
     UIManager _ui = new UIManager();
     ResourceManager _resource = new ResourceManager();
 
-    public UIManager UI => Instance?._ui;
-    public ResourceManager ResourceManager => Instance?._resource;
+    public static UIManager UI => Instance?._ui;
+    public static ResourceManager RM => Instance?._resource;
     #endregion
 
 
@@ -41,7 +43,9 @@ public class Managers : MonoBehaviour
 
             s_instance = go.GetComponent<Managers>();
 
-
+            Player.Init();
+            UI.ShowSceneUI<UI_Info>();
+            UI.ShowPopupUI<UI_MainMenu>();
         }
     }
 }

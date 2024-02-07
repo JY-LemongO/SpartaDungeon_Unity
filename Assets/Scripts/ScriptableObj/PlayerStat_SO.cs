@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 [CreateAssetMenu(menuName ="Stat", fileName ="Class_")]
@@ -8,7 +9,8 @@ public class PlayerStat_SO : ScriptableObject
     public Sprite sprite;
 
     public string displayClassName;
-    public string displayDesc;
+    public string displayName;
+    [TextArea(3, 10)] public string displayDesc;
 
     public int lv;
     public int hp;
@@ -16,7 +18,6 @@ public class PlayerStat_SO : ScriptableObject
 
     public float atk;
     public float def;
-
-    public int exp;
+    
     public int gold;    
 }
