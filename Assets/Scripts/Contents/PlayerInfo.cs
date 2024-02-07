@@ -36,7 +36,7 @@ public class PlayerInfo
         string[] classNames = typeof(PlayerClass).GetEnumNames();
         string randomClass = classNames[Random.Range(0, classNames.Length)];        
 
-        _stat = Resources.Load<PlayerStat_SO>($"Scriptable/{randomClass}");
+        _stat = Resources.Load<PlayerStat_SO>($"Scriptable/PlayerClass/{randomClass}");
 
         ClassName = _stat.displayClassName;
         Name = _stat.displayName;

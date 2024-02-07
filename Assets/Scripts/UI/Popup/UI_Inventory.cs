@@ -14,7 +14,7 @@ public class UI_Inventory : UI_Popup
         Back_Btn,
     }
 
-    private readonly int _slotCounts = 28;
+    
 
     public override void Init()
     {
@@ -25,8 +25,11 @@ public class UI_Inventory : UI_Popup
 
         GetButton((int)Buttons.Back_Btn).onClick.AddListener(BackToMain);
 
-        for (int i = 0; i < _slotCounts; i++)
-            Managers.UI.MakeSubUI<UI_Item>(parent: GetGameObject((int)GameObjects.Content).transform);
+        for (int i = 0; i < Managers.Inven._slotCounts; i++)
+        {
+            UI_Item ui_Itme = Managers.UI.MakeSubUI<UI_Item>(parent: GetGameObject((int)GameObjects.Content).transform);
+            ui_Itme.Setup(Managers.Inven.HasItems[i]);
+        }            
     }
 
     private void BackToMain()

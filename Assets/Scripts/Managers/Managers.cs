@@ -44,6 +44,7 @@ public class Managers : MonoBehaviour
             s_instance = go.GetComponent<Managers>();
 
             Player.Init();
+            Inven.TestInit();
             UI.ShowSceneUI<UI_Info>();
             UI.ShowPopupUI<UI_MainMenu>();
         }
