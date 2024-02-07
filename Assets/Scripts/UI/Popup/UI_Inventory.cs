@@ -14,7 +14,7 @@ public class UI_Inventory : UI_Popup
         Back_Btn,
     }
 
-    private readonly int _slotCounts = 20;
+    private readonly int _slotCounts = 28;
 
     public override void Init()
     {

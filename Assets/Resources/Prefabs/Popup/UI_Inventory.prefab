@@ -158,7 +158,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2783549691189736388}
   m_HandleRect: {fileID: 3444749275054930584}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -560,7 +560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4961702143604728399}
   - component: {fileID: 4764354094811468857}
-  - component: {fileID: 5755429732790154840}
+  - component: {fileID: 4308742048133373447}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -583,11 +583,11 @@ RectTransform:
   m_Father: {fileID: 7951887751760091008}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 583, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &4764354094811468857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &5755429732790154840
+--- !u!114 &4308742048133373447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
