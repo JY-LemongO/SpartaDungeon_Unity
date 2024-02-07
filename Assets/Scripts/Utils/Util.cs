@@ -4,12 +4,13 @@ using UnityEngine;
 
 public static class Util
 {
-    public static T GetorAddComponent<T>(GameObject go) where T : Component
+    public static GameObject FindChild(GameObject go, string name = null, bool recursive = false)
     {
-        T component = go.GetComponent<T>();
-        if(component == null)
-            component = go.AddComponent<T>();
-        return component;
+        Transform transform = FindChild<Transform>(go, name, recursive);
+        if (transform != null)
+            return transform.gameObject;
+
+        return null;
     }
 
     public static T FindChild<T>(GameObject go, string name = null, bool recursive = false)where T : UnityEngine.Object
