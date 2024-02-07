@@ -25,6 +25,8 @@ public class UI_Status : UI_Popup
         BindText(typeof(Texts));
 
         GetButton((int)Buttons.Back_Btn).onClick.AddListener(BackToMain);
+
+        UpdateStatus();
     }
 
     private void BackToMain()
@@ -33,7 +35,7 @@ public class UI_Status : UI_Popup
         Managers.UI.ShowPopupUI<UI_MainMenu>();
     }
 
-    private void UpdateUI()
+    private void UpdateStatus()
     {
         PlayerInfo info = Managers.Player;
 
